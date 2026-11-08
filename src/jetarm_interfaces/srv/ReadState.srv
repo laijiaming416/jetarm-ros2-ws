@@ -1,0 +1,4 @@
+---
+bool ok
+string message
+ArmState state

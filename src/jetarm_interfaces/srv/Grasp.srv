@@ -1,0 +1,16 @@
+# 视觉抓取：拍照位 → 识别 → 网格下探 → 合爪 → 抬升验证 → 收拢运输位
+int32 hue
+float32 height_mm
+float32 tool_deg
+float32 z_try_mm
+float32 min_area
+
+# true 时抓稳后调用 /arm/carry 收拢到运输位
+bool lift_after
+
+---
+bool ok
+string message
+geometry_msgs/Point target_mm
+float32 final_tick
+int32 attempts

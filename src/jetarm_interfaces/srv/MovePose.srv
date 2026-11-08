@@ -1,0 +1,17 @@
+# 逆运动学移动到 TCP 目标（底座坐标系，mm）
+float32 x_mm
+float32 y_mm
+float32 z_mm
+
+# 末端指向角（绝对）：0 竖直向上，90 水平向前，180 竖直向下
+float32 tool_deg
+
+# up / down / auto（auto 选与当前姿态最接近的解）
+string elbow
+
+uint16 duration_ms
+
+---
+bool ok
+string message
+ArmState state

@@ -1,0 +1,17 @@
+# 夹爪动作
+# close=false：张开；close=true：闭合
+bool close
+
+# true 时使用堵转停位判定（open_verified / close_and_hold），
+# 返回的 final_tick 是实际停位；false 时只按 target_tick 走。
+bool verified
+
+# 目标刻度；<=0 时用配置文件里的 open/close 值
+float32 target_tick
+
+---
+bool ok
+string message
+float32 final_tick
+# 仅在 verified=true 且闭合时有意义：是否检出接触候选（不等于夹稳）
+bool contact_candidate

@@ -1,0 +1,10 @@
+# 移动到配置里的命名姿态：home / photo / transport
+string name
+
+# 0 表示自动计算时长
+uint16 duration_ms
+
+---
+bool ok
+string message
+ArmState state

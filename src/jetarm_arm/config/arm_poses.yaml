@@ -1,0 +1,21 @@
+# 命名姿态（舵机刻度 0~1000，顺序固定为 ID 1,2,3,4,5,10）
+#
+# home      ：收拢初始位（robot.json actions 的 home）
+# photo     ：拍照/观察位，来源 position_trials/approved-photo-pose-20261104.json
+#             用户 2026-11-04 确认；旧值 496/350/300/110/498/160 已废弃
+# transport ：带货运输位，来源 transport_pose_candidate_20261105.json
+#             ID5/ID10 保持当前值；必须先离桌抬升再收拢（/arm/carry 负责分段）
+#
+# 注意：photo / transport 的 j3(j4) 落在 actions.json 的 safe_limits 之外，
+#       只按 robot.json 的机械限位校验，不能用动作组的安全范围。
+
+home: [508, 515, 506, 520, 499, 628]
+
+photo: [496, 646, 82, 161, 498, 175]
+
+transport:
+  positions: [496, 562, 132, 83]   # ID1~ID4
+  preserve: [5, 10]                # 保持当前夹持朝向与接触位置
+  tool_deg: 180
+  lift_mm: 50                      # 收拢前先抬升的高度
+  nominal_tcp_mm: [100, 0, 200]

@@ -1,0 +1,14 @@
+# 直接给 6 个关节下发舵机刻度（0~1000）
+# 顺序固定为 ID 1,2,3,4,5,10；某一位写 NaN 表示该关节保持不动。
+float32[6] tick
+
+# 运动时长，毫秒；0 表示按最大位移自动计算
+uint16 duration_ms
+
+# true 表示 tick 是相对当前读数的增量
+bool relative
+
+---
+bool ok
+string message
+ArmState state

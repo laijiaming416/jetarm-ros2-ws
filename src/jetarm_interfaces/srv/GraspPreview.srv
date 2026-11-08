@@ -1,0 +1,13 @@
+# 只做识别与几何解算，不移动机械臂
+int32 hue
+float32 height_mm
+float32 min_area
+
+---
+bool ok
+string message
+geometry_msgs/Point target_mm
+float32 pixel_u
+float32 pixel_v
+float32 area
+sensor_msgs/CompressedImage annotated

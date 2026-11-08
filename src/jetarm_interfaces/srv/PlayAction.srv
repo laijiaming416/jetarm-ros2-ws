@@ -1,0 +1,10 @@
+# 播放 actions.json 里的动作组
+string name
+bool loop
+
+# >0 时按该倍率缩短每帧时长（1.0 = 原速）
+float32 speed
+
+---
+bool ok
+string message

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>jetarm_bringup</name>
+  <version>0.1.0</version>
+  <description>JetArm 一键启动：语音三节点（ASR / 对话 / TTS）</description>
+  <maintainer email="laijinxuan@example.com">laijinxuan</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>jetarm_asr</exec_depend>
+  <exec_depend>jetarm_tts</exec_depend>
+  <exec_depend>jetarm_dialog</exec_depend>
+  <exec_depend>jetarm_arm</exec_depend>
+  <exec_depend>jetarm_camera</exec_depend>
+  <exec_depend>jetarm_grasp</exec_depend>
+  <exec_depend>jetarm_mission</exec_depend>
+  <exec_depend>mecanum_nav</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
